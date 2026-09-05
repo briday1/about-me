@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brian's Projects</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --accent: #245886;
+    --border: #e2e8f0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --accent: #60a5fa;
+      --border: #334155;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 2.5rem 1.25rem 4rem;
+  }
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  h1 {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+  }
+  header p {
+    color: var(--muted);
+    font-size: 1.05rem;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .card h2 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  .card h2 a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card h2 a:hover {
+    text-decoration: underline;
+  }
+  .card p {
+    margin: 0;
+    color: var(--muted);
+    flex-grow: 1;
+    line-height: 1.5;
+  }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .links a {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--text);
+    text-decoration: none;
+    background: transparent;
+  }
+  .links a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  footer {
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  footer a {
+    color: var(--accent);
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Brian's Projects</h1>
+    <p>A showcase of some of the open-source, source-first tools I've built. Each card links to the
+    repository, and to a live demo, PyPI package, or documentation when available.</p>
+  </header>
+  <section class="grid">
+    <article class="card">
+      <h2><a href="https://github.com/briday1/pugflow">pugflow</a></h2>
+      <p>Great stylized CSS flowcharts with PUG inputs and a custom fully-functional canvas editor.</p>
+      <div class="links">
+        <a href="https://github.com/briday1/pugflow">Repository</a>
+        <a href="https://briday1.github.io/pugflow/">Live demo</a>
+      </div>
+    </article>
+    <article class="card">
+      <h2><a href="https://github.com/briday1/jsonantt">jsonantt</a></h2>
+      <p>Gantt chart creation from simply formatted JSON files, rendered with matplotlib.</p>
+      <div class="links">
+        <a href="https://github.com/briday1/jsonantt">Repository</a>
+        <a href="https://briday1.github.io/jsonantt/">Live demo</a>
+        <a href="https://pypi.org/project/jsonantt/">PyPI</a>
+        <a href="https://jsonantt.readthedocs.io/en/latest/">Docs</a>
+      </div>
+    </article>
+    <article class="card">
+      <h2><a href="https://github.com/briday1/pug-sankey">pug-sankey</a></h2>
+      <p>Source-first Sankey flow diagram editor and command-line renderer, built with readable
+      <code>.pug</code> files.</p>
+      <div class="links">
+        <a href="https://github.com/briday1/pug-sankey">Repository</a>
+        <a href="https://briday1.github.io/pug-sankey/">Live demo</a>
+      </div>
+    </article>
+    <article class="card">
+      <h2><a href="https://github.com/briday1/fountain-publisher">fountain-publisher</a></h2>
+      <p>Source-first Fountain screenplay studio with live preview, exact PDF export, and GitHub
+      integration.</p>
+      <div class="links">
+        <a href="https://github.com/briday1/fountain-publisher">Repository</a>
+        <a href="https://fountain-publisher.com">Live demo</a>
+      </div>
+    </article>
+    <article class="card">
+      <h2><a href="https://github.com/briday1/taskunity">taskunity</a></h2>
+      <p>Local-first, file-backed productivity web app with dashboards, Gantt timelines, Kanban
+      boards, calendars, and burndown charts.</p>
+      <div class="links">
+        <a href="https://github.com/briday1/taskunity">Repository</a>
+      </div>
+    </article>
+    <article class="card">
+      <h2><a href="https://github.com/briday1/sigvue">sigvue</a></h2>
+      <p>Turns a file-backed scientific script into a local browser application for signal viewing
+      and repeatable batch processing.</p>
+      <div class="links">
+        <a href="https://github.com/briday1/sigvue">Repository</a>
+        <a href="https://pypi.org/project/sigvue/">PyPI</a>
+      </div>
+    </article>
+  </section>
+  <footer>
+    <p>See the <a href="https://github.com/briday1/about-me">about-me</a> repository on GitHub.</p>
+  </footer>
+</main>
+</body>
+</html>
